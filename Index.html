@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bald Rat Cut Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #2c3e50, #27ae60);
+            color: white;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            z-index: 1000;
+            padding-right: 40px;
+        }
+        .btn {
+            padding: 5px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            font-size: 14px;
+            border: 1px solid white;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .btn.login {
+            background: #27ae60;
+            color: white;
+        }
+        .btn.login:hover {
+            background: #2ecc71;
+            transform: scale(1.05);
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1.5s forwards;
+            margin-top: 50px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .title span {
+            color: #f1c40f;
+        }
+        .description {
+            margin: 15px 0;
+        }
+        .features {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            text-align: center;
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .image-container {
+            padding: 20px;
+        }
+        .logo {
+            max-width: 200px;
+            animation: fadeIn 1.5s;
+        }
+        .socials {
+            position: absolute;
+            bottom: 10px;
+            display: flex;
+            gap: 15px;
+        }
+        .socials a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <a href="login.html" class="btn login">Iniciar Sesión</a>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1 class="title">Bienvenido a <span>Bald Rat Cut Projects</span></h1>
+            <p class="description">Una plataforma para la colaboración en proyectos de investigación, donde estudiantes y profesores trabajan juntos para el desarrollo de conocimiento.</p>
+            <div class="features">
+                <div class="feature">Conexión con expertos</div>
+                <div class="feature">Gestión de proyectos</div>
+                <div class="feature">Crecimiento académico</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="LOGO BALDRAT.png" alt="Logo Bald Rat Cut Projects" class="logo">
+        </div>
+    </div>
+    <div class="socials">
+        <a href="#">LinkedIn</a>
+        <a href="#">X</a>
+        <a href="#">Facebook</a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.querySelector(".container");
+            container.style.animation = "fadeInUp 1.5s forwards";
+        });
+    </script>
+</body>
+</html>
